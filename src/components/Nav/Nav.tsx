@@ -17,8 +17,8 @@ const Nav = () => {
           <NavList isMobile={false} />
         </div>
       </div>
-      <div className="md:hidden">
-        <MobileNav isOpen={isOpen} />
+      <div className={`${isOpen ? "block" : "hidden"} w-full md:hidden`}>
+        <MobileNav />
       </div>
     </nav>
   );

@@ -1,10 +1,9 @@
 import NavList from "../NavList/NavList";
-import { MobileNavProps } from "./types";
 
-const MobileNav = ({ isOpen }: MobileNavProps) => {
+const MobileNav = () => {
   return (
     <div
-      className={`bg-very-dark-violet text-very-light-gray flex h-[calc(100vh-99px)] flex-col justify-between ${isOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-300 ease-in-out ${isOpen ? "" : "pointer-events-none"}`}
+      className={`bg-very-dark-violet text-very-light-gray justify-between} flex flex-col`}
     >
       <NavList isMobile />
       <img
