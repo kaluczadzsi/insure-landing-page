@@ -14,7 +14,7 @@ const App = () => {
           alt="Family walking on the sidewalk"
         />
         <img
-          className="hidden md:absolute md:right-0 md:top-[18%] md:block md:max-w-[50%] md:pr-24 xl:max-w-[100%] 2xl:px-48"
+          className="hidden translate-y-[-50%] sm:top-[50%] md:absolute md:right-8 md:block md:max-w-[380px] md:border-2 lg:top-[18%] lg:max-w-[400px] lg:translate-y-0 xl:right-24 xl:max-w-full 2xl:right-48"
           src="/images/image-intro-desktop.jpg"
           alt="Family walking on the sidewalk"
         />
@@ -31,11 +31,13 @@ const App = () => {
             src="/images/bg-pattern-intro-right-mobile.svg"
             alt="Wave pattern"
           />
-          <img
-            className="right-0 top-0 z-0 hidden overflow-hidden md:absolute md:block md:w-[250px] lg:w-[300px] xl:w-[400px] 2xl:w-[400px]"
-            src="/images/bg-pattern-intro-right-desktop.svg"
-            alt="Wave pattern"
-          />
+          <div className="absolute right-0 top-0 h-full w-full overflow-hidden">
+            <img
+              className="right-0 top-[-50px] z-50 hidden w-full overflow-hidden md:absolute md:block md:w-[300px] lg:w-[350px] xl:w-[400px] 2xl:top-[-80px] 2xl:w-[450px]"
+              src="/images/bg-pattern-intro-right-desktop.svg"
+              alt="Wave pattern"
+            />
+          </div>
           <img
             className="bottom-[-140px] left-0 z-0 hidden sm:bottom-[-190px] md:absolute md:block md:w-[100px] 2xl:bottom-[-250px] 2xl:w-[180px]"
             src="/images/bg-pattern-intro-left-desktop.svg"
