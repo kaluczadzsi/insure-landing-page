@@ -1,6 +1,7 @@
 export interface ButtonProps {
   href: string;
-  label: string;
   isMobile: boolean;
   isLast: boolean;
+  children: React.ReactNode;
+  additionalStyles?: React.CSSProperties;
 }

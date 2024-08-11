@@ -17,9 +17,6 @@ export default {
       fontSize: {
         body: "16px",
       },
-      backgroundImage: {
-        "pattern-mobile-nav": "url('/images/bg-pattern-mobile-nav.svg')",
-      },
     },
   },
   plugins: [],

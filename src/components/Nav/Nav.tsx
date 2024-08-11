@@ -1,14 +1,22 @@
+import { useContext, useEffect, useState } from "react";
+import { InnerContext } from "../../context/ScreenContext/ScreenContext";
 import MobileNav from "../MobileNav/MobileNav";
 import MobileNavToggle from "../MobileNavToggle/MobileNavToggle";
 import NavList from "../NavList/NavList";
-import { useState } from "react";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const screenWidth = useContext(InnerContext);
+
+  useEffect(() => {
+    if (screenWidth && screenWidth >= 768) {
+      setIsOpen(false);
+    }
+  }, [screenWidth]);
 
   return (
     <nav>
-      <div className="flex items-center justify-between p-6">
+      <div className="flex items-center justify-between p-6 xl:px-24 2xl:px-48">
         <img className="h-[20px]" src="/images/logo.svg" alt="Company logo" />
         <div className="md:hidden">
           <MobileNavToggle isOpen={isOpen} setIsOpen={setIsOpen} />
