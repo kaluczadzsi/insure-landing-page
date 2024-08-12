@@ -21,9 +21,7 @@ const Nav = () => {
         <div className="md:hidden">
           <MobileNavToggle isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-        <div className="hidden md:flex">
-          <NavList isMobile={false} />
-        </div>
+        <NavList styles="hidden md:flex gap-8" />
       </div>
       <div className={`${isOpen ? "block" : "hidden"} w-full md:hidden`}>
         <MobileNav />

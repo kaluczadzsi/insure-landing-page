@@ -1,3 +1,3 @@
 export interface NavListProps {
-  isMobile: boolean;
+  styles?: string;
 }

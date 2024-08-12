@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import { ButtonVariants } from "../Button/types";
 
 const Hero = () => {
   return (
@@ -39,29 +40,20 @@ const Hero = () => {
           alt="Wave pattern"
         />
 
-        <div className="z-50 mb-4 font-heading text-[2.8rem] leading-[1] xl:mb-6 xl:text-6xl">
-          <h1>Humanizing</h1>
-          <span>your insurance.</span>
+        <div className="z-50">
+          <div className="mb-4 font-heading text-[2.8rem] leading-[1] xl:mb-6 xl:text-6xl">
+            <h1>Humanizing</h1>
+            <span>your insurance.</span>
+          </div>
+          <p className="mb-8 leading-[1.8] md:max-w-[38%]">
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that’s right for
+            you. Ensure you and your loved ones are protected.
+          </p>
+          <Button href="#plan" variant={ButtonVariants.SECONDARY}>
+            view plans
+          </Button>
         </div>
-        <p className="z-50 mb-8 leading-[1.8] md:max-w-[38%]">
-          Get your life insurance coverage easier and faster. We blend our
-          expertise and technology to help you find the plan that’s right for
-          you. Ensure you and your loved ones are protected.
-        </p>
-        <Button
-          additionalStyles={{
-            border: "2px solid hsl(0, 0%, 98%)",
-            padding: "8px 16px",
-            color: "hsl(0, 0%, 98%)",
-            maxWidth: "50%",
-            fontSize: "16px",
-          }}
-          href="#plan"
-          isMobile={false}
-          isLast={false}
-        >
-          VIEW PLANS
-        </Button>
       </article>
     </header>
   );

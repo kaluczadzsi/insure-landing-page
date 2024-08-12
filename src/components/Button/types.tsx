@@ -1,7 +1,10 @@
 export interface ButtonProps {
-  href: string;
-  isMobile: boolean;
-  isLast: boolean;
+  variant?: ButtonVariants;
   children: React.ReactNode;
-  additionalStyles?: React.CSSProperties;
+  href: string;
+}
+
+export enum ButtonVariants {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
 }

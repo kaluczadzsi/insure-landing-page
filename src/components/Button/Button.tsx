@@ -1,25 +1,24 @@
-import { baseStyles, desktopStyles, mobileStyles } from "./styles";
 import { ButtonProps } from "./types";
 
-const Button = ({
-  href,
-  isMobile,
-  isLast,
-  children,
-  additionalStyles,
-}: ButtonProps) => {
-  const lastItemStyles = isMobile
-    ? "border-very-light-gray border-2"
-    : "border-very-dark-violet hover:text-very-light-gray hover:bg-dark-violet border-2 py-2 px-4";
+const Button = ({ variant, href, children }: ButtonProps) => {
+  let className = `tracking-[1.5px] font-medium text-sm transition ease-in `;
+
+  switch (variant) {
+    case "primary":
+      className +=
+        "px-6 py-2 border-2 border-very-dark-violet text-very-dark-violet hover:bg-very-dark-violet hover:text-very-light-gray";
+      break;
+    case "secondary":
+      className +=
+        "px-6 py-2 border-2 border-very-light-gray text-very-light-gray hover:bg-very-light-gray hover:text-dark-violet";
+      break;
+    default:
+      className += "text-dark-grayish-violet hover:text-very-dark-violet";
+  }
 
   return (
-    <button
-      style={additionalStyles}
-      className={`${baseStyles} ${isMobile ? mobileStyles : desktopStyles} ${isLast ? lastItemStyles : ""}`}
-    >
-      <a className="block h-full w-full" href={href}>
-        {children}
-      </a>
+    <button className={className}>
+      <a href={href}>{children?.toString().toUpperCase()}</a>
     </button>
   );
 };
