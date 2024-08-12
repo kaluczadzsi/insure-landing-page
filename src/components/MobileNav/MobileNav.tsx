@@ -1,11 +1,23 @@
-import NavList from "../NavList/NavList";
+import Button from "../Button/Button";
+import { ButtonVariants } from "../Button/types";
 
 const MobileNav = () => {
   return (
-    <div
-      className={`flex flex-col justify-around bg-very-dark-violet text-very-light-gray`}
-    >
-      <NavList styles="flex flex-col" />
+    <div className={`flex flex-col justify-around bg-very-dark-violet`}>
+      <div className="flex flex-col gap-8 px-8 py-16 md:hidden">
+        <Button href="#work" variant={ButtonVariants.TERTIARY}>
+          how we work
+        </Button>
+        <Button href="#blog" variant={ButtonVariants.TERTIARY}>
+          blog
+        </Button>
+        <Button href="#account" variant={ButtonVariants.TERTIARY}>
+          account
+        </Button>
+        <Button href="#plan" variant={ButtonVariants.SECONDARY}>
+          view plans
+        </Button>
+      </div>
       <img
         src="/images/bg-pattern-mobile-nav.svg"
         alt="Mobile background pattern"

@@ -7,4 +7,5 @@ export interface ButtonProps {
 export enum ButtonVariants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
+  TERTIARY = "tertiary",
 }

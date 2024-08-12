@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { InnerContext } from "../../context/ScreenContext/ScreenContext";
 import MobileNav from "../MobileNav/MobileNav";
 import MobileNavToggle from "../MobileNavToggle/MobileNavToggle";
-import NavList from "../NavList/NavList";
+import Button from "../Button/Button";
+import { ButtonVariants } from "../Button/types";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -21,7 +22,14 @@ const Nav = () => {
         <div className="md:hidden">
           <MobileNavToggle isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-        <NavList styles="hidden md:flex gap-8" />
+        <div className="hidden gap-8 md:flex">
+          <Button href="#work">how we work</Button>
+          <Button href="#blog">blog</Button>
+          <Button href="#account">account</Button>
+          <Button href="#plan" variant={ButtonVariants.PRIMARY}>
+            view plans
+          </Button>
+        </div>
       </div>
       <div className={`${isOpen ? "block" : "hidden"} w-full md:hidden`}>
         <MobileNav />
