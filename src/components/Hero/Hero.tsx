@@ -3,7 +3,7 @@ import { ButtonVariants } from "../Button/types";
 
 const Hero = () => {
   return (
-    <header className="relative bg-dark-violet text-very-light-gray">
+    <header className="hero relative bg-dark-violet text-very-light-gray">
       <img
         className="w-full sm:hidden"
         src="/images/image-intro-mobile.jpg"
@@ -35,7 +35,7 @@ const Hero = () => {
           />
         </div>
         <img
-          className="bottom-[-140px] left-0 z-0 hidden sm:bottom-[-190px] md:absolute md:block md:w-[100px] 2xl:bottom-[-250px] 2xl:w-[180px]"
+          className="left-0 z-0 hidden md:absolute md:bottom-[-120px] md:block md:w-[80px] xl:bottom-[-250px] xl:w-[140px] 2xl:bottom-[-280px] 2xl:w-[180px]"
           src="/images/bg-pattern-intro-left-desktop.svg"
           alt="Wave pattern"
         />
