@@ -10,7 +10,7 @@ const Features = () => {
       </header>
       <div className="flex flex-col gap-12 md:flex-row">
         {FEATURES.map((feature) => (
-          <Feature {...feature} />
+          <Feature key={feature.title} {...feature} />
         ))}
       </div>
     </main>

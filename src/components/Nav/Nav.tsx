@@ -4,7 +4,7 @@ import MobileNav from "../MobileNav/MobileNav";
 import MobileNavToggle from "../MobileNavToggle/MobileNavToggle";
 import Button from "../Button/Button";
 import { ButtonVariants } from "../Button/types";
-import { motion, AnimatePresence } from "framer-motion"; // Importálás
+import { motion, AnimatePresence } from "framer-motion";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -37,11 +37,11 @@ const Nav = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="w-full md:hidden"
+            initial={{ height: 0 }}
+            animate={{ height: "calc(100vh - 90px)" }}
+            exit={{ height: 0 }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+            className="overflow-hidden md:hidden"
           >
             <MobileNav />
           </motion.div>

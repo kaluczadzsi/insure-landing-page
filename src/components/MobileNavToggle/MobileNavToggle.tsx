@@ -1,5 +1,5 @@
 import { MobileNavToggleProps } from "./types";
-import { motion } from "framer-motion"; // Importálás
+import { motion } from "framer-motion";
 
 const MobileNavToggle = ({ isOpen, setIsOpen }: MobileNavToggleProps) => {
   return (
