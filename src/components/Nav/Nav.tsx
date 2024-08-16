@@ -12,7 +12,7 @@ const Nav = () => {
   const screenWidth = useContext(InnerContext);
 
   useEffect(() => {
-    if (screenWidth && screenWidth === 768) {
+    if (screenWidth && screenWidth <= 768) {
       setIsOpen(false);
     }
   }, [screenWidth]);
