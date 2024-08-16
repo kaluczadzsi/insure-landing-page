@@ -5,6 +5,7 @@ import MobileNavToggle from "../MobileNavToggle/MobileNavToggle";
 import Button from "../Button/Button";
 import { ButtonVariants } from "../Button/types";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "../Logo/Logo";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,9 +20,7 @@ const Nav = () => {
   return (
     <nav>
       <div className="flex items-center justify-between p-6 xl:px-24 2xl:px-48">
-        <a href="#">
-          <img className="h-[20px]" src="/images/logo.svg" alt="Company logo" />
-        </a>
+        <Logo />
         <div className="md:hidden">
           <MobileNavToggle isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
