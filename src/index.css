@@ -13,3 +13,11 @@
 img {
   display: block;
 }
+
+.svg path {
+  transition: fill 0.3s ease;
+}
+
+.svg:hover path {
+  fill: hsl(256, 26%, 20%);
+}
