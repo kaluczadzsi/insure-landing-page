@@ -1,6 +1,6 @@
 const Social = () => {
   return (
-    <div className="social">
+    <div className="social flex gap-4">
       <a href="#">
         <img src="/images/icon-facebook.svg" alt="Facebook icon" />
       </a>
