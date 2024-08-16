@@ -5,7 +5,7 @@ const FooterDetails = () => {
     <div className="z-50 mt-12 flex flex-col gap-8 px-8 md:flex-row md:justify-start md:gap-28 lg:gap-40 xl:gap-48 xl:px-24 2xl:gap-64 2xl:px-48">
       {INFO.map((info) => (
         <article
-          className="z-50 flex-col justify-center text-center"
+          className="z-50 flex-col justify-center text-center md:text-left"
           key={info.title}
         >
           <h1 className="mb-8 font-medium text-dark-grayish-violet">
